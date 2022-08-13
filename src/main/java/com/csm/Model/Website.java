@@ -1,0 +1,167 @@
+package com.csm.Model;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Lob;
+import java.time.Instant;
+
+@Entity
+public class Website {
+	@Id
+	@Column(name = "websiteId", nullable = false)
+	private Long id;
+
+	@Column(name = "mvccVersion", nullable = false)
+	private Long mvccVersion;
+
+	@Column(name = "uuid_", length = 75)
+	private String uuid;
+
+	@Column(name = "companyId")
+	private Long companyId;
+
+	@Column(name = "userId")
+	private Long userId;
+
+	@Column(name = "userName", length = 75)
+	private String userName;
+
+	@Column(name = "createDate")
+	private Instant createDate;
+
+	@Column(name = "modifiedDate")
+	private Instant modifiedDate;
+
+	@Column(name = "classNameId")
+	private Long classNameId;
+
+	@Column(name = "classPK")
+	private Long classPK;
+
+	@Lob
+	@Column(name = "url")
+	private String url;
+
+	@Column(name = "typeId")
+	private Long typeId;
+
+	@Column(name = "primary_")
+	private Byte primary;
+
+	@Column(name = "lastPublishDate")
+	private Instant lastPublishDate;
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public Long getMvccVersion() {
+		return mvccVersion;
+	}
+
+	public void setMvccVersion(Long mvccVersion) {
+		this.mvccVersion = mvccVersion;
+	}
+
+	public String getUuid() {
+		return uuid;
+	}
+
+	public void setUuid(String uuid) {
+		this.uuid = uuid;
+	}
+
+	public Long getCompanyId() {
+		return companyId;
+	}
+
+	public void setCompanyId(Long companyId) {
+		this.companyId = companyId;
+	}
+
+	public Long getUserId() {
+		return userId;
+	}
+
+	public void setUserId(Long userId) {
+		this.userId = userId;
+	}
+
+	public String getUserName() {
+		return userName;
+	}
+
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+
+	public Instant getCreateDate() {
+		return createDate;
+	}
+
+	public void setCreateDate(Instant createDate) {
+		this.createDate = createDate;
+	}
+
+	public Instant getModifiedDate() {
+		return modifiedDate;
+	}
+
+	public void setModifiedDate(Instant modifiedDate) {
+		this.modifiedDate = modifiedDate;
+	}
+
+	public Long getClassNameId() {
+		return classNameId;
+	}
+
+	public void setClassNameId(Long classNameId) {
+		this.classNameId = classNameId;
+	}
+
+	public Long getClassPK() {
+		return classPK;
+	}
+
+	public void setClassPK(Long classPK) {
+		this.classPK = classPK;
+	}
+
+	public String getUrl() {
+		return url;
+	}
+
+	public void setUrl(String url) {
+		this.url = url;
+	}
+
+	public Long getTypeId() {
+		return typeId;
+	}
+
+	public void setTypeId(Long typeId) {
+		this.typeId = typeId;
+	}
+
+	public Byte getPrimary() {
+		return primary;
+	}
+
+	public void setPrimary(Byte primary) {
+		this.primary = primary;
+	}
+
+	public Instant getLastPublishDate() {
+		return lastPublishDate;
+	}
+
+	public void setLastPublishDate(Instant lastPublishDate) {
+		this.lastPublishDate = lastPublishDate;
+	}
+
+}
